@@ -1,0 +1,26 @@
+body{
+    background-color:#f0e6e6
+
+}
+
+h1{
+    text-align: center;
+}
+
+div{
+    background-color: blue;
+    color: white ;
+    border-radius: 8px;
+}
+
+#receita{
+    background-color: darkkhaki;
+    color:brown;
+    border-radius: 8px;
+}
+
+.preparo{
+    background-color:  palevioletred;
+    color: white;
+    border-radius: 8px;
+}
