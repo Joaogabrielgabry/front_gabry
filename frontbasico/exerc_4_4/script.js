@@ -1,12 +1,39 @@
 let estadoInicial = true;
 let numeroCurtidas = 0;
 
-function alterarTexto(){
+function alterarTexto() {
     const mensagem = document.getElementById('mensagem');
-
-    if(estadoInicial){
-        mensagem.textContent='Olá, mundo!';
-    } else{
-        mensagem.textContent='Clique no botão para alterar o texto.';
+    
+    if (estadoInicial) {
+        mensagem.textContent = 'Olá, mundo!';
+    } else {
+        mensagem.textContent = 'Clique no botão para alterar o texto.';
     }
+
+    estadoInicial = !estadoInicial;
+}
+
+function curtir() {
+    numeroCurtidas++;
+    atualizarCurtidas();
+}
+
+function descurtir() {
+    if (numeroCurtidas > 0) {
+        numeroCurtidas--;
+    }
+    atualizarCurtidas();
+}
+
+function atualizarCurtidas() {
+    document.getElementById('curtidas').textContent = 'Curtidas: ' + numeroCurtidas;
+}
+
+function exibirBoasVindas() {
+    document.getElementById('mensagem-boas-vindas').textContent = 'Bem-vindo ao site!';
+    alert('O botão de boas-vindas foi clicado!');
+}
+
+function mudarTexto(button) {
+    button.textContent = 'Obrigado por clicar';
 }
