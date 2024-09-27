@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Divs</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilo Personalizado -->
+    <style>
+        /* Personalizando a altura dos slides para dar mais destaque */
+        .carousel-item {
+            height: 300px;
+        }
+
+        /* Estilizando os backgrounds para os slides */
+        .carousel-item:nth-child(1) {
+            background-color: #3498db; /* Azul */
+        }
+
+        .carousel-item:nth-child(2) {
+            background-color: #e74c3c; /* Vermelho */
+        }
+
+        .carousel-item:nth-child(3) {
+            background-color: #2ecc71; /* Verde */
+        }
+
+        /* Centralizando o texto dentro dos slides */
+        .carousel-item div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Carrossel Bootstrap -->
+<div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
+  
+  <!-- Indicadores (pequenos círculos abaixo do carrossel) -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#meuCarrossel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <!-- Conteúdo dos slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="d-block w-100 text-center">
+        Slide 1
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-100 text-center">
+        Slide 2
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-block w-100 text-center">
+        Slide 3
+      </div>
+    </div>
+  </div>
+
+  <!-- Botões de navegação -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Próximo</span>
+  </button>
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
