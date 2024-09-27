@@ -1,0 +1,16 @@
+body{
+    background-color: black;
+}
+
+@font-face {
+    font-family: 'StayPeach';
+    src: url('fonte/stay-peach.ttf');
+}
+
+h1{
+    color: rgb(224, 99, 17);
+    text-align: center;
+    font-family: 'StayPeach';
+    font-size: 5rem;
+    text-shadow: 0 0 15px rgb(224, 99, 17);
+}
